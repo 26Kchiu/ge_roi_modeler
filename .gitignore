@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.gemini/
+.gcloudignore
+Dockerfile
+policy.yaml
+deployment_guide.md
+implementation_plan.md
+walkthrough.md
+*.tgz

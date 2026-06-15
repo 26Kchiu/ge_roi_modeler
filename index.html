@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Agent Platform ROI Modeler</title>
+    <link rel="icon" type="image/svg+xml" href="./grab_logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <div class="header-title-row">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 0.5rem;">
+                        <img src="./grab_logo.svg" alt="Grab Logo" style="height: 44px;">
+                        <h1 style="margin: 0;">Enterprise Agent Platform ROI Modeler</h1>
+                    </div>
+                    <p style="margin-bottom: 1rem; color: var(--text-secondary);">Demystifying the cost of building an enterprise agent platform at scale</p>
+                    <!-- Removed old text pillars inline row -->
+                </div>
+                <div>
+                    <button class="btn-reset" id="btn-reset">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        Reset Workspace
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Platform Pillars Cards Grid -->
+        <section class="pillars-section" style="margin-bottom: 2.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                
+                <!-- Pillar 1: Agents -->
+                <div class="pillar-card pillar-agents">
+                    <span class="hero-card-badge badge-gemini">PILLAR 01</span>
+                    <div class="hero-card-provider" style="margin-bottom: 0.15rem; gap: 0.5rem; align-items: center; display: flex;">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F; filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); flex-shrink: 0;"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+                        <span style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Agents</span>
+                    </div>
+                    <div class="pillar-img-wrapper">
+                        <img src="./agents_pillar.png" alt="Agents" class="pillar-img">
+                    </div>
+                    <p style="font-size: 0.725rem; color: var(--text-secondary); line-height: 1.5; margin: 0; padding-top: 0.15rem;">Deploy cognitive workers tailored for specific business verticals. Automate structured processes, handle live workflows, and scale operations instantly.</p>
+                </div>
+
+                <!-- Pillar 2: Tokens -->
+                <div class="pillar-card pillar-tokens">
+                    <span class="hero-card-badge badge-claude">PILLAR 02</span>
+                    <div class="hero-card-provider" style="margin-bottom: 0.15rem; gap: 0.5rem; align-items: center; display: flex;">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--anthropic-primary); filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.4)); flex-shrink: 0;"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+                        <span style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Coding tokens</span>
+                    </div>
+                    <div class="pillar-img-wrapper">
+                        <img src="./tokens_pillar.png" alt="Coding tokens" class="pillar-img">
+                    </div>
+                    <p style="font-size: 0.725rem; color: var(--text-secondary); line-height: 1.5; margin: 0; padding-top: 0.15rem;">The high-performance API fuel powering agent cognition, prompt execution, and dynamic multi-modal output generation across the enterprise.</p>
+                </div>
+
+                <!-- Pillar 3: Enterprise Search -->
+                <div class="pillar-card pillar-search">
+                    <span class="hero-card-badge badge-emerald">PILLAR 03</span>
+                    <div class="hero-card-provider" style="margin-bottom: 0.15rem; gap: 0.5rem; align-items: center; display: flex;">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--emerald-primary); filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4)); flex-shrink: 0;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
+                        <span style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Enterprise Search</span>
+                    </div>
+                    <div class="pillar-img-wrapper">
+                        <img src="./search_pillar.png" alt="Enterprise Search" class="pillar-img">
+                    </div>
+                    <p style="font-size: 0.725rem; color: var(--text-secondary); line-height: 1.5; margin: 0; padding-top: 0.15rem;">Securely connect proprietary organizational knowledge bases to cognitive agents using high-precision semantic retrieval and grounding.</p>
+                </div>
+
+                <!-- Pillar 4: Security -->
+                <div class="pillar-card pillar-security">
+                    <span class="hero-card-badge badge-rose">PILLAR 04</span>
+                    <div class="hero-card-provider" style="margin-bottom: 0.15rem; gap: 0.5rem; align-items: center; display: flex;">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--rose-primary); filter: drop-shadow(0 0 4px rgba(244, 63, 94, 0.4)); flex-shrink: 0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg>
+                        <span style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Security & Governance</span>
+                    </div>
+                    <div class="pillar-img-wrapper">
+                        <img src="./security_pillar.png" alt="Security" class="pillar-img">
+                    </div>
+                    <p style="font-size: 0.725rem; color: var(--text-secondary); line-height: 1.5; margin: 0; padding-top: 0.15rem;">Enforce enterprise-grade access control, comprehensive compliance auditing, and central data governance across all active workloads.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modeler Info & Guide (Collapsible) -->
+        <details class="glass-panel modeler-guidance-details" style="margin-bottom: 2.25rem; padding: 0; border: 1px solid rgba(0,0,0,0.03); border-radius: 1.25rem; background: #FFFFFF; box-shadow: 0 8px 24px rgba(0,0,0,0.03); cursor: pointer; overflow: hidden;">
+            <summary style="display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 1.5rem; outline: none; list-style: none; user-select: none;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F; filter: drop-shadow(0 0 4px rgba(96, 165, 250, 0.4));"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                        Modeler Scope &amp; How to Use It
+                        <span style="font-family: 'Inter', sans-serif; font-size: 0.725rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: #00B14F; background: rgba(59, 130, 246, 0.1); padding: 0.2rem 0.5rem; border-radius: 2rem; border: 1px solid rgba(0, 177, 79, 0.2); margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                            <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg> Click to expand
+                        </span>
+                    </h2>
+                </div>
+                <!-- Collapsible Indicator Icon -->
+                <div class="collapse-icon-container" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="details-chevron" style="color: var(--text-secondary); transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </summary>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; padding: 0 1.5rem 1.75rem 1.5rem; cursor: default; border-top: 1px solid #EAEAEA;">
+                <!-- Column 1: What is Covered & Assumed -->
+                <div style="display: flex; flex-direction: column; gap: 1.25rem; padding-top: 1.25rem;">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 600; color: #00B14F; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        What is Covered &amp; Assumed Today
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.15rem;">
+                        <!-- Point 4: Gemini Standard Value Bundle -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(0, 177, 79, 0.1); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(0, 177, 79, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F;"><path d="M20 6L9 17l-5-5"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.2rem 0;">Gemini Enterprise Standard Bundle Value</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">Includes the total dollar value you receive as part of the bundled subscription under Gemini list pricing. This showcases the comprehensive, end-to-end value customers derive directly from their subscription without piecemeal add-on fees.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 3: 25 Agents Assumed Directional -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(0, 177, 79, 0.1); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(0, 177, 79, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F;"><path d="M20 6L9 17l-5-5"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.2rem 0;">Directional <span class="dynamic-agents-count">25</span> Agents Baseline</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">The default configuration of <span class="dynamic-agents-count">25</span> agents is directional and serves as a conversation starter. You can scale this higher or lower to match client conversations, unearthing incremental business value while revealing the hidden infrastructure costs associated with other platforms as workloads scale.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 5: Quota & Extra Value -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(0, 177, 79, 0.1); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(0, 177, 79, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F;"><path d="M20 6L9 17l-5-5"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.2rem 0;">Uncapped Modeler Quota Value</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">While active calculations show quota use for the <span class="dynamic-agents-count">25</span> agents configured today, there is extensive additional capacity available under the subscription. Showcase to customers how much extra workload they can run without paying additional fees—unlike competitors where every request is metered.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: How to Use It -->
+                <div style="display: flex; flex-direction: column; gap: 1.25rem; padding-top: 1.25rem;">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--anthropic-secondary); margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--anthropic-secondary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        Modeler Guidelines &amp; How to Use It
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.15rem;">
+                        <!-- Point 1: Estimate Modeler -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(249, 115, 22, 0.12); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(249, 115, 22, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--anthropic-secondary);"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.2rem 0;">Comparative Value Estimator</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">This modeler provides a highly robust cost estimate. Use it to powerfully showcase the clear financial and architecture-wide value of Gemini Enterprise compared to competitor platforms when sizing a client's agentic roadmap.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2: Standard and Plus seats constraint -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(249, 115, 22, 0.12); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(249, 115, 22, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--anthropic-secondary);"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0 0 0.2rem 0;">Seat Option Guidelines (No mixing inside calculator)</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">Seat mixing is fully allowed in general for Gemini Enterprise. However, to keep this modeler simple and straightforward, the calculations within this tool assume either 100% Standard seats or 100% Plus seats.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 6: Enterprise Search Free (Most Important) -->
+                        <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <div style="background: rgba(244, 63, 94, 0.12); border-radius: 0.375rem; padding: 0.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; border: 1px solid rgba(244, 63, 94, 0.2);">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--rose-primary);"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.875rem; font-weight: 600; color: var(--rose-primary); margin: 0 0 0.2rem 0;">Enterprise Search Pricing Included for Free!</h4>
+                                <p style="font-size: 0.775rem; color: var(--text-secondary); line-height: 1.45; margin: 0;"><strong>Most Important:</strong> The pricing for Enterprise Search is completely excluded from this model because you get it completely <strong>for free</strong> with Gemini Enterprise. Elsewhere, search requests consume tokens for every single request, leading to massive extra costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- Pre-defined Client Presets Row -->
+        <div class="presets-row">
+            <div class="presets-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span>Quick Client Presets:</span>
+            </div>
+            <button class="preset-pill" data-preset="midmarket" onclick="applyPreset('midmarket')">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--emerald-primary); box-shadow: 0 0 6px var(--emerald-primary);"></span>
+                Mid-Market Team (250 Seats, 5 Agents)
+            </button>
+            <button class="preset-pill" data-preset="enterprise" onclick="applyPreset('enterprise')">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #00B14F; box-shadow: 0 0 6px var(--gemini-primary);"></span>
+                Enterprise Scale (5k Seats, 25 Agents)
+            </button>
+            <button class="preset-pill" data-preset="global" onclick="applyPreset('global')">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #a78bfa; box-shadow: 0 0 6px #a78bfa;"></span>
+                Global Sovereign (25k Seats, 50 Agents)
+            </button>
+            <button class="preset-pill" data-preset="custom" onclick="applyPreset('custom')">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #00B14F; box-shadow: 0 0 6px #00B14F;"></span>
+                Custom Scenario (Variable)
+            </button>
+        </div>
+
+        <!-- Top Configurator Bar -->
+        <section class="glass-panel configurator-bar">
+            <div class="config-item">
+                <div class="config-label">
+                    <span style="display: flex; align-items: center; gap: 0.4rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gemini-primary); box-shadow: 0 0 6px var(--gemini-primary); display: inline-block;"></span>
+                        Organization Seats
+                    </span>
+                    <span class="config-value-text" id="lbl-seats">1,000</span>
+                </div>
+                <input type="range" min="50" max="200000" step="50" value="1000" class="config-slider" id="slider-seats">
+            </div>
+
+            <div class="config-item">
+                <div class="config-label">
+                    <span>Gemini Standard Seat Price ($/mo)</span>
+                </div>
+                <input type="number" value="30" class="config-input" id="input-gemini-price">
+            </div>
+
+            <div class="config-item">
+                <div class="config-label">
+                    <span>Gemini Plus Seat Price ($/mo)</span>
+                </div>
+                <input type="number" value="50" class="config-input" id="input-gemini-plus-price">
+            </div>
+
+        </section>
+
+        <!-- Developer & User Token Workload Panel -->
+        <section class="glass-panel workload-config-panel" style="margin-top: -1rem; margin-bottom: 2.5rem; padding: 1.75rem; border: 1px solid rgba(0,0,0,0.03); border-radius: 1.25rem; background: #FFFFFF; box-shadow: 0 8px 24px rgba(0,0,0,0.03);">
+            
+            <!-- Header Row with title and Agentic Toggle -->
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 1rem;">
+                <div>
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg viewBox="0 0 24 24" width="20" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: #00B14F; filter: drop-shadow(0 0 5px rgba(26, 115, 232, 0.4));"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        Developer & User Token Workloads
+                    </h3>
+                    <p style="font-size: 0.725rem; color: var(--text-muted); margin: 0.25rem 0 0 0;">Configure user token volumes and toggle agentic multi-turn loops vs. single-turn standard workloads.</p>
+                </div>
+                
+                <!-- Agentic vs. Non-Agentic Toggle Switch -->
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Workload Type:</span>
+                    <div class="chatgpt-model-toggle" style="margin: 0; padding: 0.15rem; background: #FFFFFF; width: 280px; display: flex; border-radius: 0.5rem;">
+                        <button class="toggle-btn active" id="btn-workload-agentic" onclick="setWorkloadMode('agentic')" style="font-size: 0.725rem; padding: 0.4rem 0.75rem; border-radius: 0.35rem; flex: 1; text-align: center;">Agentic Use (Looping)</button>
+                        <button class="toggle-btn" id="btn-workload-standard" onclick="setWorkloadMode('standard')" style="font-size: 0.725rem; padding: 0.4rem 0.75rem; border-radius: 0.35rem; flex: 1; text-align: center;">Non-Agentic (Standard)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sliders for the 3 user categories -->
+            <div class="configurator-bar" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 1.5rem; gap: 2rem; display: grid;">
+                
+                <!-- Power-Users -->
+                <div class="config-item">
+                    <div class="config-label">
+                        <span style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gemini-primary); box-shadow: 0 0 6px var(--gemini-primary); display: inline-block;"></span>
+                            Power-Users
+                        </span>
+                        <span class="config-value-text" id="lbl-workload-power" style="color: var(--gemini-primary);">100</span>
+                    </div>
+                    <input type="range" min="0" max="1000" step="5" value="100" class="config-slider slider-anthropic" id="slider-workload-power" style="background: rgba(0, 177, 79, 0.1);">
+                    <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.1rem;">loop factor: 8x. Intensive developers/architects.</div>
+                </div>
+
+                <!-- Pro-Users -->
+                <div class="config-item">
+                    <div class="config-label">
+                        <span style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gemini-primary); box-shadow: 0 0 6px var(--gemini-primary); display: inline-block;"></span>
+                            Pro-Users
+                        </span>
+                        <span class="config-value-text" id="lbl-workload-pro" style="color: var(--gemini-primary);">250</span>
+                    </div>
+                    <input type="range" min="0" max="2000" step="10" value="250" class="config-slider slider-gemini" id="slider-workload-pro" style="background: rgba(0, 177, 79, 0.1);">
+                    <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.1rem;">loop factor: 4x. Standard engineers & analysts.</div>
+                </div>
+
+                <!-- Business-Users -->
+                <div class="config-item">
+                    <div class="config-label">
+                        <span style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gemini-primary); box-shadow: 0 0 6px var(--gemini-primary); display: inline-block;"></span>
+                            Business-Users
+                        </span>
+                        <span class="config-value-text" id="lbl-workload-business" style="color: var(--gemini-primary);">500</span>
+                    </div>
+                    <input type="range" min="0" max="5000" step="10" value="500" class="config-slider slider-emerald" id="slider-workload-business" style="background: rgba(0, 177, 79, 0.1);">
+                    <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.1rem;">loop factor: 1.5x. Information workers.</div>
+                </div>
+
+            </div>
+
+            <!-- Token Consumption Assumptions Accordion Dropdown -->
+            <details class="accordion-panel" id="workload-assumptions-details" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.03); border-radius: 0.75rem; margin-top: 1rem; box-shadow: none;">
+                <summary class="accordion-summary" style="padding: 0.8rem 1.25rem; font-size: 0.75rem; color: var(--text-secondary); display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <span style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        View User Token Consumption Assumptions & Rates
+                    </span>
+                    <svg class="accordion-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 12px; height: 12px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </summary>
+                <div class="accordion-content" style="padding: 1rem 1.25rem; font-size: 0.725rem; color: var(--text-muted); line-height: 1.5;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        
+                        <!-- Power-Users Column -->
+                        <div style="background: rgba(0, 0, 0, 0.02); padding: 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(0,0,0,0.03);">
+                            <div style="font-weight: 700; color: var(--gemini-primary); border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">Power-Users</div>
+                            <ul style="margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                <li><strong>Agentic (8x Loop) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">4.8M Uncached In / 49.6M Cached In / 480k Out</div>
+                                </li>
+                                <li><strong>Standard (Non-Agentic) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">600k Uncached In / 6.2M Cached In / 60k Out</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Pro-Users Column -->
+                        <div style="background: rgba(0, 0, 0, 0.02); padding: 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(0,0,0,0.03);">
+                            <div style="font-weight: 700; color: var(--gemini-primary); border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">Pro-Users</div>
+                            <ul style="margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                <li><strong>Agentic (4x Loop) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">1.44M Uncached In / 10.08M Cached In / 192k Out</div>
+                                </li>
+                                <li><strong>Standard (Non-Agentic) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">360k Uncached In / 2.52M Cached In / 48k Out</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Business-Users Column -->
+                        <div style="background: rgba(0, 0, 0, 0.02); padding: 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(0,0,0,0.03);">
+                            <div style="font-weight: 700; color: var(--gemini-primary); border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; margin-bottom: 0.5rem;">Business-Users</div>
+                            <ul style="margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                                <li><strong>Agentic (1.5x Loop) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">76k Uncached In / 228k Cached In / 15.2k Out</div>
+                                </li>
+                                <li><strong>Standard (Non-Agentic) Daily Volumes:</strong>
+                                    <div style="margin-left: 0.25rem; color: var(--text-secondary);">50k Uncached In / 150k Cached In / 10k Out</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div style="margin-top: 0.75rem; border-top: 1px dashed rgba(0, 0, 0, 0.03); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.675rem; color: var(--text-muted); flex-wrap: wrap; gap: 0.5rem;">
+                        <span>* Caching Pricing Discounts: Anthropic Claude Prompt Caching read receives a <strong>90% discount</strong> (cached input is billed at 10% of standard input rate).</span>
+                        <span>* OpenAI ChatGPT Prompt Caching read receives a <strong>90% discount</strong> (cached input is billed at 10% of standard input credit rate).</span>
+                    </div>
+                </div>
+            </details>
+
+        </section>
+
+        <!-- HERO SECTION - Subscription cost highlights centerpiece -->
+        <section class="hero-pricing-section">
+            <h2 class="hero-pricing-title">Monthly Subscription Cost Highlights</h2>
+            <div class="hero-grid">
+                
+                <!-- Claude Enterprise Card -->
+                <div class="hero-card claude-card">
+                    <span class="hero-card-badge badge-claude">CLAUDE ENTERPRISE</span>
+                    <div>
+                        <div class="hero-card-provider">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: var(--anthropic-primary)"><path d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2zm1 14.5a1 1 0 0 1-2 0v-4a1 1 0 0 1 2 0zm0-7a1 1 0 0 1-2 0V9a1 1 0 0 1 2 0z"/></svg>
+                            <span>Claude Enterprise</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span class="hero-card-main-cost" id="lbl-hero-claude-cost" style="margin-bottom: 0;">$0</span>
+                            <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 600; font-family: 'Outfit', sans-serif;">/ mo</span>
+                        </div>
+                        <div class="hero-card-sub-cost" id="lbl-hero-claude-sub-cost">With Opus 4.7</div>
+                    </div>
+                    
+                    <!-- Claude Model Selector Toggle -->
+                    <div class="claude-model-toggle">
+                        <button class="toggle-btn active" id="btn-claude-model-opus" onclick="setClaudeModel('opus')">Opus4.7</button>
+                        <button class="toggle-btn" id="btn-claude-model-sonnet" onclick="setClaudeModel('sonnet')">Sonnet4.6</button>
+                    </div>
+
+                    <div class="hero-card-breakdown" style="margin-top: 1.25rem;">
+                        <!-- Opus 4.7 Breakdown Group -->
+                        <div id="claude-opus-breakdown-group" style="margin-bottom: 0.85rem;">
+                            <div style="font-weight: 700; color: var(--anthropic-primary); font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
+                                <span>Opus 4.7 Workload Breakdown</span>
+                                <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">Billed on top of seat fee</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>1. Seat License (<span id="lbl-hero-claude-lic-price">$20</span>/user/mo):</span>
+                                <span id="lbl-hero-claude-lic-breakdown">$20,000</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>2. <span class="dynamic-agents-count">25</span> Agents (<span id="lbl-hero-opus-tokens">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-claude-api-breakdown">$98,760</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>3. User Token Workloads (<span id="lbl-hero-opus-user-tokens-vol">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-opus-coding-tokens">$6,540,000</span>
+                            </div>
+                        </div>
+
+                        <!-- Sonnet 4.6 Breakdown Group -->
+                        <div id="claude-sonnet-breakdown-group" style="margin-bottom: 0.85rem;">
+                            <div style="font-weight: 700; color: var(--anthropic-primary); font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
+                                <span>Sonnet 4.6 Workload Breakdown</span>
+                                <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">Billed on top of seat fee</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>1. Seat License (<span id="lbl-hero-claude-lic-price-sonnet">$20</span>/user/mo):</span>
+                                <span id="lbl-hero-sonnet-lic-breakdown">$20,000</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>2. <span class="dynamic-agents-count">25</span> Agents (<span id="lbl-hero-sonnet-tokens">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-sonnet-api-breakdown">$59,256</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>3. User Token Workloads (<span id="lbl-hero-sonnet-user-tokens-vol">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-sonnet-coding-tokens">$3,270,000</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Official Anthropic Terms Quote -->
+                        <div style="font-size: 0.65rem; color: var(--text-muted); border-top: 1px solid #EAEAEA; margin-top: 0.5rem; padding-top: 0.75rem; line-height: 1.45; font-style: normal; text-align: left;">
+                            <span style="font-style: italic; color: rgba(0, 0, 0, 0.45);">"Enterprise uses a single seat type, priced per user per month and billed annually. The seat fee gives each user access to Claude on web, desktop, and mobile, plus Claude Code and Cowork. Usage isn't included in the seat fee. Every token your team uses—in chat, Claude Code, or Cowork—is billed at standard API rates on top of your seat cost."</span>
+                            <div style="margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                                <a href="https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan#h_8294bce903" target="_blank" style="color: var(--anthropic-primary); text-decoration: underline; font-weight: 500;">Source: Anthropic Support</a>
+                                <span style="font-style: italic; color: rgba(0, 0, 0, 0.55);">* There is additional cost for running agents 24x7.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gemini Card (Highlight Centerpiece) -->
+                <div class="hero-card gemini-highlight">
+                    <span class="hero-card-badge badge-gemini" id="lbl-gemini-edition-badge">FLAT SUBSCRIPTIONS</span>
+                    <div>
+                        <div class="hero-card-provider">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #00B14F"><path d="M12 2a1 1 0 0 1 .993.883L13 3v1a1 1 0 0 1-1.993.117L11 4V3a1 1 0 0 1 1-1zm3.364 2.05a1 1 0 0 1 1.408.093l.7.8a1 1 0 0 1-1.42 1.394l-.7-.8a1 1 0 0 1 .012-1.487zm-6.728 0a1 1 0 0 1 .093 1.408l-.8.7a1 1 0 0 1-1.394-1.42l.8-.7a1 1 0 0 1 1.487.012zM21 11a1 1 0 0 1 .117 1.993L21 13h-1a1 1 0 0 1-.117-1.993L20 11h1zM4 11a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11h1zm12.35 6.27a1 1 0 0 1-.093 1.408l-.7.8a1 1 0 0 1-1.42-1.394l.7-.8a1 1 0 0 1 1.487.012zm-8.7 0a1 1 0 0 1 1.408.093l.7.8a1 1 0 0 1-1.42 1.394l-.7-.8a1 1 0 0 1 .012-1.487zM12 6a7 7 0 1 1-6.996 7.15L5 13a7 7 0 0 1 7-7z"/></svg>
+                            <span id="lbl-hero-gemini-title">Gemini Enterprise</span>
+                        </div>
+                        
+                        <div class="gemini-pricing-rows">
+                            <!-- Standard tier row -->
+                            <div class="gemini-pricing-row-item">
+                                <span class="gemini-row-label">Enterprise Standard:</span>
+                                <div class="gemini-row-price-container">
+                                    <span class="gemini-row-price" id="lbl-hero-gemini-std-cost">$30,000</span>
+                                    <span class="gemini-row-period">/ mo</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Plus tier row -->
+                            <div class="gemini-pricing-row-item">
+                                <span class="gemini-row-label">Enterprise Plus:</span>
+                                <div class="gemini-row-price-container">
+                                    <span class="gemini-row-price" id="lbl-hero-gemini-plus-cost">$50,000</span>
+                                    <span class="gemini-row-period">/ mo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Agent Pricing Selector inside Gemini Card -->
+                        <div class="gemini-agent-selector-container">
+                            <span class="gemini-agent-selector-label"><span class="dynamic-agents-count">25</span> Agents Pricing Option</span>
+                            <div class="gemini-agent-toggle">
+                                <button class="gemini-toggle-btn active" id="btn-gemini-agent-as-is" onclick="setGeminiAgentPricing('as-is')">Agent Designer</button>
+                                <button class="gemini-toggle-btn" id="btn-gemini-agent-flash" onclick="setGeminiAgentPricing('flash')">Custom Agents</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card-breakdown" style="margin-top: 1.25rem;">
+                        <!-- Enterprise Standard Group -->
+                        <div style="margin-bottom: 0.85rem;">
+                            <div style="font-weight: 700; color: #00B14F; font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
+                                <span>Enterprise Standard Breakdown</span>
+                                <span id="lbl-hero-gemini-std-badge-note" style="font-size: 0.65rem; color: #a8c7fa; font-weight: normal; text-transform: none;">Fully Bundled Rate</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>1. Seat License (<span id="lbl-hero-gemini-std-lic-price">$30</span>/user/mo):</span>
+                                <span id="lbl-hero-gemini-std-breakdown">$30,000</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>2. <span class="dynamic-agents-count">25</span> Agents (<span id="lbl-hero-gemini-std-agent-tokens">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-gemini-std-agent-cost" style="color: #0f9d58;">$0.00 (Included)</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span id="lbl-hero-gemini-std-user-workload-title">3. Included User Tokens**:</span>
+                                <span id="lbl-hero-gemini-std-user-workload-cost" style="color: #0f9d58;">$0.00 (Included)</span>
+                            </div>
+                        </div>
+
+                        <!-- Enterprise Plus Group -->
+                        <div style="margin-bottom: 0.85rem;">
+                            <div style="font-weight: 700; color: #00B14F; font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
+                                <span>Enterprise Plus Breakdown</span>
+                                <span id="lbl-hero-gemini-plus-badge-note" style="font-size: 0.65rem; color: #a8c7fa; font-weight: normal; text-transform: none;">Fully Bundled Rate</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>1. Seat License (<span id="lbl-hero-gemini-plus-lic-price">$50</span>/user/mo):</span>
+                                <span id="lbl-hero-gemini-plus-breakdown">$50,000</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span>2. <span class="dynamic-agents-count">25</span> Agents (<span id="lbl-hero-gemini-plus-agent-tokens">0.0B</span> tkn/mo):</span>
+                                <span id="lbl-hero-gemini-plus-agent-cost" style="color: #0f9d58;">$0.00 (Included)</span>
+                            </div>
+                            <div class="hero-card-breakdown-row">
+                                <span id="lbl-hero-gemini-plus-user-workload-title">3. Included User Tokens**:</span>
+                                <span id="lbl-hero-gemini-plus-user-workload-cost" style="color: #0f9d58;">$0.00 (Included)</span>
+                            </div>
+                        </div>
+
+                        <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.25rem; line-height: 1.45; text-align: left;">
+                            <div>* $0 overages apply when creating agents from within Gemini Enterprise. Gemini Code Assist developer licenses are bundled natively at no additional cost.</div>
+                            <div style="margin-top: 0.25rem; color: rgba(0, 0, 0, 0.55);">* For Agent Designer there is no additional cost for running agent 24x7 whereas for Custom Agents there is additional cost for running them 24x7 like others.</div>
+                            <div style="margin-top: 0.25rem; color: rgba(0, 0, 0, 0.55);">* Included user workloads are pooled across organization seats: 1,500 requests/day per seat at 50k tokens/request = 75M daily tokens (with 8 requests/task, max 187 tasks/day). Limit splits: 14.5% uncached input, 84.5% cached input, 1% output. Overages are billed at standard Gemini 3.5 Flash PAYG pricing.</div>
+                            <div style="margin-top: 0.25rem; color: rgba(0, 0, 0, 0.55);">** Assumption: depends on the types and complexity of task and models chosen.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ChatGPT Card -->
+                <div class="hero-card chatgpt-card">
+                    <span class="hero-card-badge badge-chatgpt">CHATGPT ENTERPRISE</span>
+                    <div>
+                        <div class="hero-card-provider">
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="color: #10a37f"><path d="M21.2 9.4c.2-.6.2-1.3-.1-1.9a3.7 3.7 0 0 0-2.8-2.6c-.6-.1-1.3-.1-1.9.1A3.7 3.7 0 0 0 13.8 2c-.6-.2-1.3-.2-1.9-.1A3.7 3.7 0 0 0 9.4 4.8c-.6-.2-1.3-.2-1.9-.1a3.7 3.7 0 0 0-2.8 2.6c-.1.6-.1 1.3.1 1.9A3.7 3.7 0 0 0 2.8 12c-.2.6-.2 1.3-.1 1.9a3.7 3.7 0 0 0 2.8 2.6c.6.1 1.3.1 1.9-.1A3.7 3.7 0 0 0 10.2 22c.6.2 1.3.2 1.9.1a3.7 3.7 0 0 0 2.6-2.8c.6.2 1.3.2 1.9.1a3.7 3.7 0 0 0 2.8-2.6c.1-.6.1-1.3-.1-1.9A3.7 3.7 0 0 0 21.2 12c.2-.6.2-1.3.1-1.9zm-4.3.4l-1.8 1.1c.1-.4.1-.7.1-1.1a1.9 1.9 0 0 0-1.9-1.9h-1.3V5.5c1 0 1.9-.8 1.9-1.9V3c.9.2 1.7.9 2 1.8.3 1 .1 2-.4 2.8.4.1.8.3 1.1.6.5.7.6 1.6.3 2.6zM13 18.5V21c-.9-.2-1.7-.9-2-1.8-.3-1-.1-2 .4-2.8-.4-.1-.8-.3-1.1-.6a3 3 0 0 1-.3-2.6l1.8-1.1c-.1.4-.1.7-.1 1.1a1.9 1.9 0 0 0 1.9 1.9h1.3zm-5.7-2.6c-.4-.1-.8-.3-1.1-.6a3 3 0 0 1-.3-2.6l1.8-1.1c-.1.4-.1.7-.1 1.1 0 1 1 1.9 1.9 1.9h1.3V18.5c-1 0-1.9.8-1.9 1.9v.6c-.9-.2-1.7-.9-2-1.8-.3-1-.1-2 .4-2.8zm-.8-3.9V12c-.9.2-1.7.9-2 1.8-.3 1-.1 2 .4 2.8a1.9 1.9 0 0 0-1.9-1.9H2.8l1.8-1.1c.1.4.1.7.1 1.1 0 1 1 1.9 1.9 1.9h1.3zm8.7-2.6l1.8-1.1c-.1.4-.1.7-.1 1.1 0 1-1 1.9-1.9 1.9h-1.3V5.5c1 0 1.9-.8 1.9-1.9V3c.9.2 1.7.9 2 1.8.3 1 .1 2-.4 2.8.4.1.8.3 1.1.6a3 3 0 0 1 .3 2.6z"/></svg>
+                            <span>ChatGPT Enterprise</span>
+                        </div>
+                        <div style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span class="hero-card-main-cost" id="lbl-hero-chatgpt-cost" style="margin-bottom: 0;">$0</span>
+                            <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 600; font-family: 'Outfit', sans-serif;">/ mo</span>
+                        </div>
+                        <div class="hero-card-sub-cost">Flexible Credit Consumption</div>
+                    </div>
+                    
+                    <!-- ChatGPT Model Selector Toggle -->
+                    <div class="chatgpt-model-toggle">
+                        <button class="toggle-btn active" id="btn-chatgpt-model-53" onclick="setChatgptModel('gpt53')">GPT-5.3-Codex</button>
+                        <button class="toggle-btn" id="btn-chatgpt-model-55" onclick="setChatgptModel('gpt55')">GPT-5.5 (Flagship)</button>
+                    </div>
+
+                    <div class="hero-card-breakdown" style="margin-top: 0.5rem;">
+                        <div style="font-weight: 700; color: #10a37f; font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
+                            <span>Codex Workload Breakdown</span>
+                            <span id="lbl-hero-chatgpt-credits-model-title" style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">GPT-5.3-Codex Credits/mo</span>
+                        </div>
+                        <div class="hero-card-breakdown-row">
+                            <span>1. Seat Credits (200 cr/user/mo):</span>
+                            <span id="lbl-hero-chatgpt-min-breakdown">$0</span>
+                        </div>
+                        <div class="hero-card-breakdown-row">
+                            <span>2. <span class="dynamic-agents-count">25</span> Agents (<span id="lbl-hero-chatgpt-agent-credits">0.0M</span> cr/mo):</span>
+                            <span id="lbl-hero-chatgpt-agent-breakdown">$0</span>
+                        </div>
+                        <div class="hero-card-breakdown-row">
+                            <span>3. User Workloads (<span id="lbl-hero-chatgpt-coding-credits">0.0M</span> cr/mo):</span>
+                            <span id="lbl-hero-chatgpt-coding-breakdown">$0</span>
+                        </div>
+                        <div style="border-top: 1px dashed rgba(0, 0, 0, 0.08); margin-top: 0.5rem; padding-top: 0.5rem; display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-secondary);">
+                            <span>Total Credits Consumed:</span>
+                            <strong id="lbl-hero-chatgpt-total-credits" style="color: var(--text-primary);">0.0M</strong>
+                        </div>
+                        <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.25rem; line-height: 1.45; text-align: left;">
+                            <div>* Priced at $<span id="lbl-hero-chatgpt-footnote-price">0.035</span> per credit. Paid in packages of <span id="lbl-hero-chatgpt-footnote-min">200</span> credits ($<span id="lbl-hero-chatgpt-footnote-min-cost">7.00</span>) minimum per seat. <span id="lbl-hero-chatgpt-footnote-burn-rates">Credits calculated based on GPT-5.3-Codex burn rates (43.75 input / 350 output credits per 1M tokens).</span></div>
+                            <div style="margin-top: 0.25rem; color: rgba(0, 0, 0, 0.55);">* There is additional cost for running agents 24x7.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Two Column Dashboard Grid -->
+        <main class="dashboard-grid">
+            
+            <!-- Left Column - Pricing Matrices & Widgets -->
+            <div class="dashboard-column">
+                
+                <!-- Claude Enterprise Pricing Matrix -->
+                <details class="accordion-panel rate-configurator" id="claude-matrix-accordion">
+                    <summary class="accordion-summary" style="padding: 1.5rem;">
+                        <span>Claude Enterprise Pricing Matrix</span>
+                        <svg class="accordion-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="accordion-content" style="padding-top: 1rem;">
+                        <form class="rate-form">
+                            <!-- Custom Claude Flat Seat Cost -->
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">Claude Seat License Cost</div>
+                                <div class="rate-inputs-row" style="grid-template-columns: 1fr;">
+                                    <div style="flex-direction: row; align-items: center; justify-content: space-between;">
+                                        <label>Flat Seat Fee ($/user/mo)</label>
+                                        <input type="number" value="20" class="config-input" id="input-claude-seat-price" style="width: 120px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">Opus 4.7 API Token Rates</div>
+                                <div class="rate-inputs-row">
+                                    <div>
+                                        <label>Input ($/1M)</label>
+                                        <input type="number" step="0.5" value="5.0" class="config-input" id="input-rate-claude-in">
+                                    </div>
+                                    <div>
+                                        <label>Output ($/1M)</label>
+                                        <input type="number" step="0.5" value="25.0" class="config-input" id="input-rate-claude-out">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">Claude 4.6 Sonnet Rates</div>
+                                <div class="rate-inputs-row">
+                                    <div>
+                                        <label>Input ($/1M)</label>
+                                        <input type="number" step="0.5" value="3.0" class="config-input" id="input-rate-sonnet-in">
+                                    </div>
+                                    <div>
+                                        <label>Output ($/1M)</label>
+                                        <input type="number" step="0.5" value="15.0" class="config-input" id="input-rate-sonnet-out">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </details>
+
+            </div> <!-- End of Left Column -->
+
+            <!-- Middle Column - ROI & Value Realization -->
+            <div class="dashboard-column">
+                <!-- ROI & Value Realization Collapsible Panel -->
+                <details class="accordion-panel roi-card" id="roi-accordion" open style="margin-bottom: 0;">
+                    <summary class="accordion-summary" style="padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; user-select: none; outline: none;">
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem;">
+                            <span id="lbl-roi-card-title" style="margin: 0; font-size: 1.15rem; font-weight: 700; font-family: 'Outfit', sans-serif;">Gemini Enterprise Subscription Additional Value</span>
+                            <span class="roi-badge" id="lbl-roi-ratio" style="position: static;">78.8x ROI</span>
+                        </div>
+                        <svg class="accordion-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="accordion-content" style="padding: 0 1.5rem 1.5rem 1.5rem; border-top: 1px solid #EAEAEA; padding-top: 1.25rem;">
+                        
+                        <style>
+                        @keyframes searchGlow {
+                            0% { background-position: 0% 50%; box-shadow: 0 0 8px rgba(0, 242, 254, 0.3); }
+                            50% { background-position: 100% 50%; box-shadow: 0 0 18px rgba(0, 242, 254, 0.6); }
+                            100% { background-position: 0% 50%; box-shadow: 0 0 8px rgba(0, 242, 254, 0.3); }
+                        }
+                        .search-glow-animated {
+                            background-size: 200% 200% !important;
+                            animation: searchGlow 4s ease infinite;
+                        }
+                        .roi-bar-segment {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease, filter 0.2s ease;
+                            position: relative;
+                            cursor: pointer;
+                        }
+                        .roi-bar-segment:hover {
+                            filter: brightness(1.2);
+                            transform: scaleY(1.08);
+                            z-index: 10;
+                        }
+                        .roi-bar-text {
+                            font-size: 0.65rem;
+                            font-weight: 700;
+                            color: #ffffff;
+                            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+                            white-space: normal;
+                            text-align: center;
+                            line-height: 1.1;
+                            padding: 0 4px;
+                            user-select: none;
+                        }
+                        .roi-legend-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                            gap: 0.75rem;
+                            margin-top: 1rem;
+                        }
+                        .roi-legend-item {
+                            background: rgba(0, 0, 0, 0.03);
+                            border: 1px solid rgba(0,0,0,0.03);
+                            border-radius: 8px;
+                            padding: 0.75rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.25rem;
+                            transition: border-color 0.2s, background 0.2s;
+                        }
+                        .roi-legend-item:hover {
+                            background: rgba(0, 0, 0, 0.06);
+                            border-color: rgba(0, 0, 0, 0.1);
+                        }
+                        .roi-legend-header {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            font-size: 0.75rem;
+                            font-weight: 600;
+                            color: var(--text-muted);
+                        }
+                        .roi-legend-dot {
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            flex-shrink: 0;
+                        }
+                        .roi-legend-val {
+                            font-size: 1rem;
+                            font-weight: 700;
+                            color: var(--text-primary);
+                            font-family: 'Outfit', sans-serif;
+                        }
+                        </style>
+
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
+                            <span>Included Value Distribution (Stacked View)</span>
+                        </div>
+
+                        <div class="roi-stacked-bar" style="display: flex; height: 60px; width: 100%; border-radius: 8px; overflow: visible; background: rgba(0, 0, 0, 0.03); margin-bottom: 1.25rem; box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.15); position: relative; border: 1px solid rgba(0,0,0,0.03); padding: 1px;">
+                            <div id="bar-roi-storage" class="roi-bar-segment" style="background: #4285f4; width: 25%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                                <span class="roi-bar-text">Storage</span>
+                            </div>
+                            <div id="bar-roi-deep" class="roi-bar-segment" style="background: #fa7b17; width: 35%;">
+                                <span class="roi-bar-text">Deep Research</span>
+                            </div>
+                            <div id="bar-roi-video" class="roi-bar-segment" style="background: #a066ff; width: 20%;">
+                                <span class="roi-bar-text">Video Gen</span>
+                            </div>
+                            <div id="bar-roi-image" class="roi-bar-segment" style="background: #10b981; width: 10%;">
+                                <span class="roi-bar-text">Image Gen</span>
+                            </div>
+                            <div id="bar-roi-search" class="roi-bar-segment search-glow-animated" style="background: #0891b2; width: 10%; border-top-right-radius: 6px; border-bottom-right-radius: 6px; box-shadow: 0 0 15px rgba(8, 145, 178, 0.4); border-left: 1px solid rgba(0, 0, 0, 0.15);">
+                                <span class="roi-bar-text" style="color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">Enterprise Search 🔍</span>
+                            </div>
+                        </div>
+
+                        <!-- Legend Details Grid -->
+                        <div class="roi-legend-grid">
+                            <div class="roi-legend-item" style="background: rgba(66, 133, 244, 0.05); border: 1px solid rgba(66, 133, 244, 0.15);">
+                                <div class="roi-legend-header">
+                                    <div class="roi-legend-dot" style="background: #4285f4;"></div>
+                                    <span id="lbl-roi-storage-label">Storage (30 GB/seat)</span>
+                                </div>
+                                <div class="roi-legend-val" id="lbl-roi-storage">$150,000 / mo</div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $5.00 / GB</div>
+                            </div>
+
+                            <div class="roi-legend-item" style="background: rgba(250, 123, 23, 0.05); border: 1px solid rgba(250, 123, 23, 0.15);">
+                                <div class="roi-legend-header">
+                                    <div class="roi-legend-dot" style="background: #fa7b17;"></div>
+                                    <span id="lbl-roi-deepresearch-label">Deep Research (3/user/day)</span>
+                                </div>
+                                <div class="roi-legend-val" id="lbl-roi-deepresearch">$360,000 / mo</div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $4.00 / query</div>
+                            </div>
+
+                            <div class="roi-legend-item" style="background: rgba(160, 102, 255, 0.05); border: 1px solid rgba(160, 102, 255, 0.15);">
+                                <div class="roi-legend-header">
+                                    <div class="roi-legend-dot" style="background: #a066ff;"></div>
+                                    <span id="lbl-roi-video-label">Video Generation (2/user/day)</span>
+                                </div>
+                                <div class="roi-legend-val" id="lbl-roi-video">$120,000 / mo</div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $2.00 / video ($0.40/s)</div>
+                            </div>
+
+                            <div class="roi-legend-item" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15);">
+                                <div class="roi-legend-header">
+                                    <div class="roi-legend-dot" style="background: #10b981;"></div>
+                                    <span id="lbl-roi-image-label">Image Generation (5/user/day)</span>
+                                </div>
+                                <div class="roi-legend-val" id="lbl-roi-image">$3,000 / mo</div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $0.02 / image</div>
+                            </div>
+
+                            <div class="roi-legend-item" style="grid-column: 1 / -1; border: 1px dashed rgba(8, 145, 178, 0.4); background: rgba(8, 145, 178, 0.05); box-shadow: inset 0 0 10px rgba(8, 145, 178, 0.05);">
+                                <div class="roi-legend-header" style="justify-content: space-between; width: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div class="roi-legend-dot search-glow-animated" style="background: #0891b2; width: 10px; height: 10px; border-radius: 50%;"></div>
+                                        <span style="font-weight: 700; color: #0891b2;">Enterprise Search</span>
+                                    </div>
+                                    <span style="font-size: 0.65rem; padding: 2px 6px; background: rgba(8, 145, 178, 0.15); color: #0891b2; border-radius: 4px; font-weight: bold; border: 1px solid rgba(8, 145, 178, 0.3);">UNLIMITED VALUE</span>
+                                </div>
+                                <div class="roi-legend-val" style="color: #0891b2; font-size: 1.1rem; display: flex; align-items: center; justify-content: space-between; margin-top: 0.25rem; font-weight: 800;">
+                                    <span>Unlimited ($0 Overage Cost)</span>
+                                    <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; font-style: italic; text-align: right; max-width: 60%; line-height: 1.3;">
+                                        * No extra metered token costs (unlike OpenAI/Claude custom searches)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Combined Grand Total and ROI Ratio -->
+                        <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #EAEAEA; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.15rem;">
+                                <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Total Pooled Realized Value</span>
+                                <div style="font-size: 1.6rem; font-weight: 800; color: #000000; font-family: 'Outfit', sans-serif;" id="lbl-roi-total-value">$633,000</div>
+                            </div>
+                            <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; max-width: 350px; line-height: 1.45; text-align: left;">
+                                * Assistant queries are removed from this list (standard market value considered: $0.10/query). Graph depicts standard market pricing values bundled in Gemini Enterprise.
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+
+            <!-- Right Column - ChatGPT Configurator -->
+            <div class="dashboard-column">
+                
+                <!-- ChatGPT Enterprise Pricing Matrix -->
+                <details class="accordion-panel rate-configurator" id="chatgpt-matrix-accordion">
+                    <summary class="accordion-summary" style="padding: 1.5rem;">
+                        <span>ChatGPT Enterprise Pricing Matrix</span>
+                        <svg class="accordion-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="accordion-content" style="padding-top: 1rem;">
+                        <form class="rate-form">
+                            <!-- Custom Credit Price and Seat Commitment -->
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">Credit Commitment Parameters</div>
+                                <div class="rate-inputs-row">
+                                    <div>
+                                        <label>Price Per Credit ($)</label>
+                                        <input type="number" step="0.001" value="0.035" class="config-input" id="input-chatgpt-credit-price">
+                                    </div>
+                                    <div>
+                                        <label>Min Credits / Seat</label>
+                                        <input type="number" step="10" value="200" class="config-input" id="input-chatgpt-min-credits">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">GPT-5.5 (Flagship) Token Rates</div>
+                                <div class="rate-inputs-row">
+                                    <div>
+                                        <label>Input (Credits/1M)</label>
+                                        <input type="number" step="5" value="125" class="config-input" id="input-rate-gpt55-in">
+                                    </div>
+                                    <div>
+                                        <label>Output (Credits/1M)</label>
+                                        <input type="number" step="25" value="750" class="config-input" id="input-rate-gpt55-out">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rate-field-group">
+                                <div class="rate-field-group-title">GPT-5.3-Codex Token Rates</div>
+                                <div class="rate-inputs-row">
+                                    <div>
+                                        <label>Input (Credits/1M)</label>
+                                        <input type="number" step="5" value="43.75" class="config-input" id="input-rate-gpt53-in">
+                                    </div>
+                                    <div>
+                                        <label>Output (Credits/1M)</label>
+                                        <input type="number" step="25" value="350" class="config-input" id="input-rate-gpt53-out">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </details>
+
+
+
+                
+
+                </div> <!-- End of Right Column -->
+
+        </main>
+
+        <!-- Collapsible Custom Agent Modeler (Full-Width Accordion Below Dashboard Columns) -->
+        <details class="accordion-panel" id="modeler-accordion">
+            <summary class="accordion-summary">
+                <span>🔬 <span class="dynamic-agents-count">50</span> Agent Details (Assumptions)</span>
+                <svg class="accordion-indicator-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="accordion-content">
+                
+                <div class="agent-modeler-header">
+                    <h2>Custom Agent Workload Parameters</h2>
+                    <div style="display: flex; gap: 0.75rem; align-items: center;">
+                        <button id="btn-delete-selected" class="btn-delete-selected" disabled>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                            Delete Selected (<span id="delete-selected-count">0</span>)
+                        </button>
+                        <div class="search-container">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" placeholder="Search agent name..." class="search-input" id="input-search">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable Category Tabs -->
+                <div class="filter-scroller" id="filter-tabs">
+                    <span class="filter-pill active" data-vertical="All">All Verticals</span>
+                    <span class="filter-pill" data-vertical="Customer Support">Customer Support</span>
+                    <span class="filter-pill" data-vertical="IT & Tech Support">IT Support</span>
+                    <span class="filter-pill" data-vertical="Sales & Marketing">Sales & Marketing</span>
+                    <span class="filter-pill" data-vertical="Human Resources">HR</span>
+                    <span class="filter-pill" data-vertical="Legal & Compliance">Legal & Compliance</span>
+                    <span class="filter-pill" data-vertical="Finance & Procurement">Finance</span>
+                    <span class="filter-pill" data-vertical="Product & Eng">Product & Eng</span>
+                    <span class="filter-pill" data-vertical="Operations">Operations</span>
+                    <span class="filter-pill" data-vertical="Data Analytics">Data & BI</span>
+                    <span class="filter-pill" data-vertical="Strategy & Exec">Strategy & Exec</span>
+                </div>
+
+                <!-- Workload aggregations bar -->
+                <div class="workload-summary-bar">
+                    <div class="workload-summary-item">
+                        <span class="workload-summary-label">Total Custom Agents</span>
+                        <span class="workload-summary-val" id="val-summary-count">25</span>
+                    </div>
+                    <div class="workload-summary-item">
+                        <span class="workload-summary-label">Daily Workload Requests</span>
+                        <span class="workload-summary-val" id="val-summary-requests">61,300</span>
+                    </div>
+                    <div class="workload-summary-item">
+                        <span class="workload-summary-label">Daily Input Tokens</span>
+                        <span class="workload-summary-val" id="val-summary-input">333.2M</span>
+                    </div>
+                    <div class="workload-summary-item">
+                        <span class="workload-summary-label">Daily Output Tokens</span>
+                        <span class="workload-summary-val" id="val-summary-output">65.0M</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Table -->
+                <div class="table-wrapper">
+                    <table id="agent-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 45px; text-align: center;">
+                                    <input type="checkbox" id="chk-select-all" style="cursor: pointer; accent-color: #00B14F;">
+                                </th>
+                                <th>Vertical</th>
+                                <th>Agent Name</th>
+                                <th style="text-align: right;">Daily Requests</th>
+                                <th style="text-align: right;">Input Tokens</th>
+                                <th style="text-align: right;">Output Tokens</th>
+                            </tr>
+                        </thead>
+                        <tbody id="agent-table-body">
+                            <!-- Dynamic JS Injection (Safe DOM APIs) -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Add Agent Inline Form -->
+                <div class="add-agent-form">
+                    <div class="add-field">
+                        <label>Vertical</label>
+                        <select id="add-vertical">
+                            <option value="Customer Support">Customer Support</option>
+                            <option value="IT & Tech Support">IT & Tech Support</option>
+                            <option value="Sales & Marketing">Sales & Marketing</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Legal & Compliance">Legal & Compliance</option>
+                            <option value="Finance & Procurement">Finance & Procurement</option>
+                            <option value="Product & Eng">Product & Eng</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="Strategy & Exec">Strategy & Exec</option>
+                        </select>
+                    </div>
+                    <div class="add-field">
+                        <label>Agent Name</label>
+                        <input type="text" placeholder="e.g. FAQ Helper" id="add-name">
+                    </div>
+                    <div class="add-field">
+                        <label>Requests / Day</label>
+                        <input type="number" value="1000" id="add-requests">
+                    </div>
+                    <div class="add-field">
+                        <label>Input Tokens</label>
+                        <input type="number" value="1500" id="add-input">
+                    </div>
+                    <div class="add-field">
+                        <label>Output Tokens</label>
+                        <input type="number" value="500" id="add-output">
+                    </div>
+                    <button class="btn-add" id="btn-add-agent">Add Agent</button>
+                </div>
+
+            </div>
+        </details>
+
+        <!-- Official Sources Footer -->
+        <footer>
+            <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16h.01M12 8v4"/></svg>
+                Verified Google Cloud Documentation Sources & Notes
+            </h4>
+            <ul>
+                <li><span class="name-cell">Gemini Enterprise Standard & Plus cost models:</span> Baseline at 1,000 developers, with flat seat pricing configured at $30/user/mo and $50/user/mo. Optionally supports pay-as-you-go API pricing for 25 Custom Agents using standard Gemini 3.5 Flash rates ($1.50/1M input and $9.00/1M output tokens as verified on the official <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing" target="_blank">Google Cloud Vertex AI Pricing Page</a>).</li>
+                <li><span class="name-cell">ChatGPT Enterprise credit-based cost models:</span> Flexible credit billing is based on workspace consumption, with a minimum commitment of 200 credits per user seat ($7.00/seat/mo) priced at $0.035 per credit. Calculated using official OpenAI Codex rate sheets for both GPT-5.3-Codex and GPT-5.5 (Flagship) models, where cached input reads receive a <strong>90% discount</strong> (cached inputs consume exactly 10% of standard input credits as verified on the official <a href="https://developers.openai.com/codex/pricing?codex-credit-costs=business-enterprise-new&codex-pricing-plans=business-enterprise" target="_blank">OpenAI Codex Pricing Page</a>).</li>
+                <li><span class="name-cell">Claude Enterprise cost models:</span> Combines a flat license fee of **$20.00/user/mo** ($20,000 flat organization-wide for 1,000 seats) explicitly on top of custom PAYG API token usage calculations for Sonnet 4.6 and Opus 4.7.</li>
+                <li><span class="name-cell">Pooled Quota Limits:</span> Resource caps are pooled across organization licenses (e.g. 160,000 total daily assistant queries for Gemini Enterprise Standard). Gemini Enterprise Standard restricts features rather than charging overages when limits are exhausted.</li>
+                <li><span class="name-cell">Calculation Baselines:</span> Monthly rates computed over a standard 30-day billing cycle. All inputs and developer rates are reactive and computed instantly in your local browser sandbox. Read the official guidelines at <a href="https://docs.cloud.google.com/gemini/enterprise/docs/overages#quotas-standard-plus" target="_blank">Google Cloud Overages & Quotas Documentation</a>.</li>
+            </ul>
+            <div class="footer-signature">
+                <span>Made with</span>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <span>by APAC Google Cloud</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Interactive Javascript Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
