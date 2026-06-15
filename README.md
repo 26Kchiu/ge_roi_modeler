@@ -1,6 +1,6 @@
 # Enterprise Agent Platform ROI Modeler
 
-This repository contains the source code for the Enterprise Agent Platform ROI Modeler application. The app allows organizations to estimate and compare the costs of implementing AI agents using different models such as Gemini 1.5 Pro/Flash, Claude 3.5 Sonnet, and ChatGPT-4o.
+This repository contains the source code for the Enterprise Agent Platform ROI Modeler application. The app allows organizations to estimate and compare the costs of implementing AI agents using different models such as Gemini 3.5 Pro/Flash, Claude Opus 4.7/Sonnet 4.6, and ChatGPT-5.3-Codex/5.5.
 
 ## Project Structure
 
