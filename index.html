@@ -397,20 +397,20 @@
                             <span class="hero-card-main-cost" id="lbl-hero-claude-cost" style="margin-bottom: 0;">$0</span>
                             <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 600; font-family: 'Outfit', sans-serif;">/ mo</span>
                         </div>
-                        <div class="hero-card-sub-cost" id="lbl-hero-claude-sub-cost">With Opus 4.7</div>
+                        <div class="hero-card-sub-cost" id="lbl-hero-claude-sub-cost">With Opus 4.8</div>
                     </div>
                     
                     <!-- Claude Model Selector Toggle -->
                     <div class="claude-model-toggle">
-                        <button class="toggle-btn active" id="btn-claude-model-opus" onclick="setClaudeModel('opus')">Opus4.7</button>
-                        <button class="toggle-btn" id="btn-claude-model-sonnet" onclick="setClaudeModel('sonnet')">Sonnet4.6</button>
+                        <button class="toggle-btn active" id="btn-claude-model-opus" onclick="setClaudeModel('opus')">Opus 4.8</button>
+                        <button class="toggle-btn" id="btn-claude-model-sonnet" onclick="setClaudeModel('sonnet')">Sonnet 4.6</button>
                     </div>
 
                     <div class="hero-card-breakdown" style="margin-top: 1.25rem;">
-                        <!-- Opus 4.7 Breakdown Group -->
+                        <!-- Opus 4.8 Breakdown Group -->
                         <div id="claude-opus-breakdown-group" style="margin-bottom: 0.85rem;">
                             <div style="font-weight: 700; color: var(--anthropic-primary); font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
-                                <span>Opus 4.7 Workload Breakdown</span>
+                                <span>Opus 4.8 Workload Breakdown</span>
                                 <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">Billed on top of seat fee</span>
                             </div>
                             <div class="hero-card-breakdown-row">
@@ -563,14 +563,14 @@
                     
                     <!-- ChatGPT Model Selector Toggle -->
                     <div class="chatgpt-model-toggle">
-                        <button class="toggle-btn active" id="btn-chatgpt-model-53" onclick="setChatgptModel('gpt53')">GPT-5.3-Codex</button>
+                        <button class="toggle-btn active" id="btn-chatgpt-model-54" onclick="setChatgptModel('gpt54')">GPT-5.4</button>
                         <button class="toggle-btn" id="btn-chatgpt-model-55" onclick="setChatgptModel('gpt55')">GPT-5.5 (Flagship)</button>
                     </div>
 
                     <div class="hero-card-breakdown" style="margin-top: 0.5rem;">
                         <div style="font-weight: 700; color: #10a37f; font-size: 0.725rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; border-bottom: 1px solid #EAEAEA; padding-bottom: 0.25rem; display: flex; justify-content: space-between; align-items: center;">
                             <span>Codex Workload Breakdown</span>
-                            <span id="lbl-hero-chatgpt-credits-model-title" style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">GPT-5.3-Codex Credits/mo</span>
+                            <span id="lbl-hero-chatgpt-credits-model-title" style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; text-transform: none;">GPT-5.4 Credits/mo</span>
                         </div>
                         <div class="hero-card-breakdown-row">
                             <span>1. Seat Credits (200 cr/user/mo):</span>
@@ -589,7 +589,7 @@
                             <strong id="lbl-hero-chatgpt-total-credits" style="color: var(--text-primary);">0.0M</strong>
                         </div>
                         <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.25rem; line-height: 1.45; text-align: left;">
-                            <div>* Priced at $<span id="lbl-hero-chatgpt-footnote-price">0.035</span> per credit. Paid in packages of <span id="lbl-hero-chatgpt-footnote-min">200</span> credits ($<span id="lbl-hero-chatgpt-footnote-min-cost">7.00</span>) minimum per seat. <span id="lbl-hero-chatgpt-footnote-burn-rates">Credits calculated based on GPT-5.3-Codex burn rates (43.75 input / 350 output credits per 1M tokens).</span></div>
+                            <div>* Priced at $<span id="lbl-hero-chatgpt-footnote-price">0.035</span> per credit. Paid in packages of <span id="lbl-hero-chatgpt-footnote-min">200</span> credits ($<span id="lbl-hero-chatgpt-footnote-min-cost">7.00</span>) minimum per seat. <span id="lbl-hero-chatgpt-footnote-burn-rates">Credits calculated based on GPT-5.4 burn rates (62.50 input / 375 output credits per 1M tokens).</span></div>
                             <div style="margin-top: 0.25rem; color: rgba(0, 0, 0, 0.55);">* There is additional cost for running agents 24x7.</div>
                         </div>
                     </div>
@@ -624,7 +624,7 @@
                             </div>
 
                             <div class="rate-field-group">
-                                <div class="rate-field-group-title">Opus 4.7 API Token Rates</div>
+                                <div class="rate-field-group-title">Opus 4.8 API Token Rates</div>
                                 <div class="rate-inputs-row">
                                     <div>
                                         <label>Input ($/1M)</label>
@@ -718,11 +718,40 @@
                             display: flex;
                             flex-direction: column;
                             gap: 0.25rem;
-                            transition: border-color 0.2s, background 0.2s;
+                            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
                         }
                         .roi-legend-item:hover {
                             background: rgba(0, 0, 0, 0.06);
                             border-color: rgba(0, 0, 0, 0.1);
+                        }
+                        .roi-legend-item.highlighted {
+                            transform: scale(1.04);
+                            z-index: 10;
+                        }
+                        #card-roi-storage.highlighted {
+                            border-color: #4285f4 !important;
+                            background: rgba(66, 133, 244, 0.12) !important;
+                            box-shadow: 0 8px 24px rgba(66, 133, 244, 0.25);
+                        }
+                        #card-roi-deep.highlighted {
+                            border-color: #fa7b17 !important;
+                            background: rgba(250, 123, 23, 0.12) !important;
+                            box-shadow: 0 8px 24px rgba(250, 123, 23, 0.25);
+                        }
+                        #card-roi-video.highlighted {
+                            border-color: #a066ff !important;
+                            background: rgba(160, 102, 255, 0.12) !important;
+                            box-shadow: 0 8px 24px rgba(160, 102, 255, 0.25);
+                        }
+                        #card-roi-image.highlighted {
+                            border-color: #10b981 !important;
+                            background: rgba(16, 185, 129, 0.12) !important;
+                            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+                        }
+                        #card-roi-search.highlighted {
+                            border-color: #0891b2 !important;
+                            background: rgba(8, 145, 178, 0.12) !important;
+                            box-shadow: 0 8px 24px rgba(8, 145, 178, 0.25);
                         }
                         .roi-legend-header {
                             display: flex;
@@ -743,8 +772,19 @@
                             font-weight: 700;
                             color: var(--text-primary);
                             font-family: 'Outfit', sans-serif;
-                        }
                         </style>
+
+                        <!-- Value Distribution Explanation Banner -->
+                        <div class="value-distribution-info-banner" style="background: rgba(0, 177, 79, 0.04); border: 1px solid rgba(0, 177, 79, 0.15); padding: 1rem; border-radius: 0.75rem; margin-bottom: 1.25rem; font-size: 0.8rem; line-height: 1.45; color: var(--text-secondary);">
+                            <div style="display: flex; gap: 0.5rem; align-items: flex-start; margin-bottom: 0.35rem;">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--gemini-primary); flex-shrink: 0; margin-top: 0.1rem;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                <strong style="color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.85rem;">Gemini Inclusions & Value Distribution</strong>
+                            </div>
+                            <p style="margin: 0;">
+                                Unlike competitor platforms where enterprise storage, deep research agent runs, video/image generation, and grounding search calls incur incremental pay-as-you-go API consumption charges, the <strong>Gemini Enterprise Flat Subscription</strong> bundle includes generous capacities of these high-value features.
+                                Click on any segment of the stacked chart below to highlight and drill down into the market value calculation for that component.
+                            </p>
+                        </div>
 
                         <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between;">
                             <span>Included Value Distribution (Stacked View)</span>
@@ -770,7 +810,7 @@
 
                         <!-- Legend Details Grid -->
                         <div class="roi-legend-grid">
-                            <div class="roi-legend-item" style="background: rgba(66, 133, 244, 0.05); border: 1px solid rgba(66, 133, 244, 0.15);">
+                            <div class="roi-legend-item" id="card-roi-storage" style="background: rgba(66, 133, 244, 0.05); border: 1px solid rgba(66, 133, 244, 0.15);">
                                 <div class="roi-legend-header">
                                     <div class="roi-legend-dot" style="background: #4285f4;"></div>
                                     <span id="lbl-roi-storage-label">Storage (30 GB/seat)</span>
@@ -779,7 +819,7 @@
                                 <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $5.00 / GB</div>
                             </div>
 
-                            <div class="roi-legend-item" style="background: rgba(250, 123, 23, 0.05); border: 1px solid rgba(250, 123, 23, 0.15);">
+                            <div class="roi-legend-item" id="card-roi-deep" style="background: rgba(250, 123, 23, 0.05); border: 1px solid rgba(250, 123, 23, 0.15);">
                                 <div class="roi-legend-header">
                                     <div class="roi-legend-dot" style="background: #fa7b17;"></div>
                                     <span id="lbl-roi-deepresearch-label">Deep Research (3/user/day)</span>
@@ -788,7 +828,7 @@
                                 <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $4.00 / query</div>
                             </div>
 
-                            <div class="roi-legend-item" style="background: rgba(160, 102, 255, 0.05); border: 1px solid rgba(160, 102, 255, 0.15);">
+                            <div class="roi-legend-item" id="card-roi-video" style="background: rgba(160, 102, 255, 0.05); border: 1px solid rgba(160, 102, 255, 0.15);">
                                 <div class="roi-legend-header">
                                     <div class="roi-legend-dot" style="background: #a066ff;"></div>
                                     <span id="lbl-roi-video-label">Video Generation (2/user/day)</span>
@@ -797,7 +837,7 @@
                                 <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $2.00 / video ($0.40/s)</div>
                             </div>
 
-                            <div class="roi-legend-item" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15);">
+                            <div class="roi-legend-item" id="card-roi-image" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15);">
                                 <div class="roi-legend-header">
                                     <div class="roi-legend-dot" style="background: #10b981;"></div>
                                     <span id="lbl-roi-image-label">Image Generation (5/user/day)</span>
@@ -806,7 +846,7 @@
                                 <div style="font-size: 0.65rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem;">Valued @ $0.02 / image</div>
                             </div>
 
-                            <div class="roi-legend-item" style="grid-column: 1 / -1; border: 1px dashed rgba(8, 145, 178, 0.4); background: rgba(8, 145, 178, 0.05); box-shadow: inset 0 0 10px rgba(8, 145, 178, 0.05);">
+                            <div class="roi-legend-item" id="card-roi-search" style="grid-column: 1 / -1; border: 1px dashed rgba(8, 145, 178, 0.4); background: rgba(8, 145, 178, 0.05); box-shadow: inset 0 0 10px rgba(8, 145, 178, 0.05);">
                                 <div class="roi-legend-header" style="justify-content: space-between; width: 100%;">
                                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                                         <div class="roi-legend-dot search-glow-animated" style="background: #0891b2; width: 10px; height: 10px; border-radius: 50%;"></div>
@@ -879,15 +919,15 @@
                             </div>
 
                             <div class="rate-field-group">
-                                <div class="rate-field-group-title">GPT-5.3-Codex Token Rates</div>
+                                <div class="rate-field-group-title">GPT-5.4 Token Rates</div>
                                 <div class="rate-inputs-row">
                                     <div>
                                         <label>Input (Credits/1M)</label>
-                                        <input type="number" step="5" value="43.75" class="config-input" id="input-rate-gpt53-in">
+                                        <input type="number" step="5" value="62.50" class="config-input" id="input-rate-gpt54-in">
                                     </div>
                                     <div>
                                         <label>Output (Credits/1M)</label>
-                                        <input type="number" step="25" value="350" class="config-input" id="input-rate-gpt53-out">
+                                        <input type="number" step="25" value="375" class="config-input" id="input-rate-gpt54-out">
                                     </div>
                                 </div>
                             </div>
@@ -1028,8 +1068,8 @@
             </h4>
             <ul>
                 <li><span class="name-cell">Gemini Enterprise Standard & Plus cost models:</span> Baseline at 1,000 developers, with flat seat pricing configured at $30/user/mo and $50/user/mo. Optionally supports pay-as-you-go API pricing for 25 Custom Agents using standard Gemini 3.5 Flash rates ($1.50/1M input and $9.00/1M output tokens as verified on the official <a href="https://cloud.google.com/vertex-ai/generative-ai/pricing" target="_blank">Google Cloud Vertex AI Pricing Page</a>).</li>
-                <li><span class="name-cell">ChatGPT Enterprise credit-based cost models:</span> Flexible credit billing is based on workspace consumption, with a minimum commitment of 200 credits per user seat ($7.00/seat/mo) priced at $0.035 per credit. Calculated using official OpenAI Codex rate sheets for both GPT-5.3-Codex and GPT-5.5 (Flagship) models, where cached input reads receive a <strong>90% discount</strong> (cached inputs consume exactly 10% of standard input credits as verified on the official <a href="https://developers.openai.com/codex/pricing?codex-credit-costs=business-enterprise-new&codex-pricing-plans=business-enterprise" target="_blank">OpenAI Codex Pricing Page</a>).</li>
-                <li><span class="name-cell">Claude Enterprise cost models:</span> Combines a flat license fee of **$20.00/user/mo** ($20,000 flat organization-wide for 1,000 seats) explicitly on top of custom PAYG API token usage calculations for Sonnet 4.6 and Opus 4.7.</li>
+                <li><span class="name-cell">ChatGPT Enterprise credit-based cost models:</span> Flexible credit billing is based on workspace consumption, with a minimum commitment of 200 credits per user seat ($7.00/seat/mo) priced at $0.035 per credit. Calculated using official OpenAI Codex rate sheets for both GPT-5.4 and GPT-5.5 (Flagship) models, where cached input reads receive a <strong>90% discount</strong> (cached inputs consume exactly 10% of standard input credits as verified on the official <a href="https://developers.openai.com/codex/pricing?codex-credit-costs=business-enterprise-new&codex-pricing-plans=business-enterprise" target="_blank">OpenAI Codex Pricing Page</a>). Detailed API token pricing can also be referenced on the <a href="https://openai.com/api/pricing/" target="_blank">OpenAI API Pricing Page</a>.</li>
+                <li><span class="name-cell">Claude Enterprise cost models:</span> Combines a flat license fee of **$20.00/user/mo** ($20,000 flat organization-wide for 1,000 seats) explicitly on top of custom PAYG API token usage calculations for Sonnet 4.6 and Opus 4.8 as verified on the official <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank">Anthropic Claude Pricing Page</a>.</li>
                 <li><span class="name-cell">Pooled Quota Limits:</span> Resource caps are pooled across organization licenses (e.g. 160,000 total daily assistant queries for Gemini Enterprise Standard). Gemini Enterprise Standard restricts features rather than charging overages when limits are exhausted.</li>
                 <li><span class="name-cell">Calculation Baselines:</span> Monthly rates computed over a standard 30-day billing cycle. All inputs and developer rates are reactive and computed instantly in your local browser sandbox. Read the official guidelines at <a href="https://docs.cloud.google.com/gemini/enterprise/docs/overages#quotas-standard-plus" target="_blank">Google Cloud Overages & Quotas Documentation</a>.</li>
             </ul>

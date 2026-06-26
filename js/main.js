@@ -53,18 +53,18 @@
             activeFilter: 'All',
             searchQuery: '',
             rates: {
-                claude47: { in: 5.0, out: 25.0 },
+                claude48: { in: 5.0, out: 25.0 },
                 sonnet46: { in: 3.0, out: 15.0 }
             },
             codeAssistValue: 3762,
-            chatgptModel: 'gpt53',
+            chatgptModel: 'gpt54',
             claudeModel: 'opus',
 
             chatgptCreditPrice: 0.035,
             chatgptMinCredits: 200,
             chatgptRates: {
                 gpt55: { in: 125.00, out: 750.00 },
-                gpt53: { in: 43.75, out: 350.00 }
+                gpt54: { in: 62.50, out: 375.00 }
             },
             workloadMode: 'agentic',
             usersPower: 100,
@@ -105,8 +105,8 @@
         const inputChatgptMinCredits = document.getElementById('input-chatgpt-min-credits');
         const inputRateGpt55In = document.getElementById('input-rate-gpt55-in');
         const inputRateGpt55Out = document.getElementById('input-rate-gpt55-out');
-        const inputRateGpt53In = document.getElementById('input-rate-gpt53-in');
-        const inputRateGpt53Out = document.getElementById('input-rate-gpt53-out');
+        const inputRateGpt54In = document.getElementById('input-rate-gpt54-in');
+        const inputRateGpt54Out = document.getElementById('input-rate-gpt54-out');
         
         // Remove standard/plus select elements since buttons were removed from HTML
         
@@ -285,16 +285,16 @@
         function setChatgptModel(model) {
             state.chatgptModel = model;
             
-            const btn53 = document.getElementById('btn-chatgpt-model-53');
+            const btn54 = document.getElementById('btn-chatgpt-model-54');
             const btn55 = document.getElementById('btn-chatgpt-model-55');
             
-            if (btn53 && btn55) {
+            if (btn54 && btn55) {
                 if (model === 'gpt55') {
-                    btn53.classList.remove('active');
+                    btn54.classList.remove('active');
                     btn55.classList.add('active');
                 } else {
                     btn55.classList.remove('active');
-                    btn53.classList.add('active');
+                    btn54.classList.add('active');
                 }
             }
             
@@ -514,8 +514,8 @@
             lblWorkloadBusiness.textContent = formatNumber(state.usersBusiness);
 
             // Recalculate dynamic user pricing rates
-            state.rates.claude47.in = parseFloat(inputRateClaudeIn.value) || 0;
-            state.rates.claude47.out = parseFloat(inputRateClaudeOut.value) || 0;
+            state.rates.claude48.in = parseFloat(inputRateClaudeIn.value) || 0;
+            state.rates.claude48.out = parseFloat(inputRateClaudeOut.value) || 0;
             state.rates.sonnet46.in = parseFloat(inputRateSonnetIn.value) || 0;
             state.rates.sonnet46.out = parseFloat(inputRateSonnetOut.value) || 0;
 
@@ -523,8 +523,8 @@
             state.chatgptMinCredits = parseFloat(inputChatgptMinCredits.value) || 0;
             state.chatgptRates.gpt55.in = parseFloat(inputRateGpt55In.value) || 0;
             state.chatgptRates.gpt55.out = parseFloat(inputRateGpt55Out.value) || 0;
-            state.chatgptRates.gpt53.in = parseFloat(inputRateGpt53In.value) || 0;
-            state.chatgptRates.gpt53.out = parseFloat(inputRateGpt53Out.value) || 0;
+            state.chatgptRates.gpt54.in = parseFloat(inputRateGpt54In.value) || 0;
+            state.chatgptRates.gpt54.out = parseFloat(inputRateGpt54Out.value) || 0;
 
             // Totals across active modeler agents
             let totalRequests = 0;
@@ -609,9 +609,9 @@
             if (lblHeroGeminiStdAgentCost && lblHeroGeminiPlusAgentCost) {
                 if (state.geminiAgentPricingMode === 'flash') {
                     lblHeroGeminiStdAgentCost.textContent = "$" + formatNumber(monthlyGeminiAgentCost);
-                    lblHeroGeminiStdAgentCost.style.color = '#f3f4f6';
+                    lblHeroGeminiStdAgentCost.style.color = 'black';
                     lblHeroGeminiPlusAgentCost.textContent = "$" + formatNumber(monthlyGeminiAgentCost);
-                    lblHeroGeminiPlusAgentCost.style.color = '#f3f4f6';
+                    lblHeroGeminiPlusAgentCost.style.color = 'black';
                 } else {
                     lblHeroGeminiStdAgentCost.textContent = "$0.00 (Included)";
                     lblHeroGeminiStdAgentCost.style.color = '#0f9d58';
@@ -720,24 +720,24 @@
                 lblClaudeLicPriceSonnet.textContent = "$" + formatNumber(state.claudeSeatPrice);
             }
 
-            // Opus 4.7 Math
-            const dailyClaude47Cost = (totalInputTokens / 1000000 * state.rates.claude47.in) + (totalOutputTokens / 1000000 * state.rates.claude47.out);
-            const monthlyClaude47Cost = Math.round(dailyClaude47Cost * 30); // agent cost
+            // Opus 4.8 Math
+            const dailyClaude48Cost = (totalInputTokens / 1000000 * state.rates.claude48.in) + (totalOutputTokens / 1000000 * state.rates.claude48.out);
+            const monthlyClaude48Cost = Math.round(dailyClaude48Cost * 30); // agent cost
 
             // Opus User Workloads (with Anthropic 90% caching read discount)
-            const opusUncachedCost = (monthlyUncached / 1000000) * state.rates.claude47.in;
-            const opusCachedCost = (monthlyCached / 1000000) * (state.rates.claude47.in * 0.1);
-            const opusOutputCost = (monthlyOutput / 1000000) * state.rates.claude47.out;
+            const opusUncachedCost = (monthlyUncached / 1000000) * state.rates.claude48.in;
+            const opusCachedCost = (monthlyCached / 1000000) * (state.rates.claude48.in * 0.1);
+            const opusOutputCost = (monthlyOutput / 1000000) * state.rates.claude48.out;
             const opusUserWorkloadsCost = Math.round(opusUncachedCost + opusCachedCost + opusOutputCost);
 
-            const totalClaude47Cost = claudeSeatTotal + monthlyClaude47Cost + opusUserWorkloadsCost;
+            const totalClaude48Cost = claudeSeatTotal + monthlyClaude48Cost + opusUserWorkloadsCost;
 
             // Render dynamic Claude cost and toggle breakdown groups based on active model selector
             if (lblHeroClaudeCost) {
                 if (state.claudeModel === 'sonnet') {
                     lblHeroClaudeCost.textContent = "$" + formatNumber(totalSonnetClaudeCost);
                 } else {
-                    lblHeroClaudeCost.textContent = "$" + formatNumber(totalClaude47Cost);
+                    lblHeroClaudeCost.textContent = "$" + formatNumber(totalClaude48Cost);
                 }
             }
 
@@ -745,7 +745,7 @@
                 if (state.claudeModel === 'sonnet') {
                     lblHeroClaudeSubCost.textContent = "With Sonnet 4.6";
                 } else {
-                    lblHeroClaudeSubCost.textContent = "With Opus 4.7";
+                    lblHeroClaudeSubCost.textContent = "With Opus 4.8";
                 }
             }
 
@@ -763,7 +763,7 @@
                 lblHeroClaudeLicBreakdown.textContent = "$" + formatNumber(claudeSeatTotal);
             }
             if (lblHeroClaudeApiBreakdown) {
-                lblHeroClaudeApiBreakdown.textContent = "$" + formatNumber(monthlyClaude47Cost);
+                lblHeroClaudeApiBreakdown.textContent = "$" + formatNumber(monthlyClaude48Cost);
             }
             const lblOpusCodingTokens = document.getElementById('lbl-hero-opus-coding-tokens');
             if (lblOpusCodingTokens) {
@@ -781,10 +781,10 @@
             const chatgptMinCreditsTotal = state.seats * state.chatgptMinCredits;
             const chatgptMinCost = chatgptMinCreditsTotal * state.chatgptCreditPrice;
 
-            // Determine credit rates based on selected ChatGPT model (GPT-5.3-Codex or GPT-5.5)
+            // Determine credit rates based on selected ChatGPT model (GPT-5.4 or GPT-5.5)
             const chatgptRates = state.chatgptModel === 'gpt55' 
                 ? { name: 'GPT-5.5', in: state.chatgptRates.gpt55.in, out: state.chatgptRates.gpt55.out }
-                : { name: 'GPT-5.3-Codex', in: state.chatgptRates.gpt53.in, out: state.chatgptRates.gpt53.out };
+                : { name: 'GPT-5.4', in: state.chatgptRates.gpt54.in, out: state.chatgptRates.gpt54.out };
 
             // Agent credits: burn rates determined by selected model
             const chatgptAgentInputCredits = (totalInputTokens * 30 / 1000000) * chatgptRates.in;
@@ -1299,11 +1299,11 @@
                 clearPresetActiveStates();
                 calculateAll();
             });
-            inputRateGpt53In.addEventListener('input', () => {
+            inputRateGpt54In.addEventListener('input', () => {
                 clearPresetActiveStates();
                 calculateAll();
             });
-            inputRateGpt53Out.addEventListener('input', () => {
+            inputRateGpt54Out.addEventListener('input', () => {
                 clearPresetActiveStates();
                 calculateAll();
             });
@@ -1394,15 +1394,15 @@
                 state.chatgptMinCredits = 200;
                 state.chatgptRates.gpt55.in = 125.00;
                 state.chatgptRates.gpt55.out = 750.00;
-                state.chatgptRates.gpt53.in = 43.75;
-                state.chatgptRates.gpt53.out = 350.00;
+                state.chatgptRates.gpt54.in = 62.50;
+                state.chatgptRates.gpt54.out = 375.00;
 
                 inputChatgptCreditPrice.value = 0.035;
                 inputChatgptMinCredits.value = 200;
                 inputRateGpt55In.value = 125;
                 inputRateGpt55Out.value = 750;
-                inputRateGpt53In.value = 43.75;
-                inputRateGpt53Out.value = 350;
+                inputRateGpt54In.value = 62.50;
+                inputRateGpt54Out.value = 375;
 
                 const pills = filterTabs.querySelectorAll('.filter-pill');
                 pills.forEach(p => p.classList.remove('active'));
@@ -1429,10 +1429,73 @@
                 sliderWorkloadBusiness.value = 500;
 
                 setWorkloadMode('agentic');
-                setChatgptModel('gpt53');
+                setChatgptModel('gpt54');
                 setDetailsEdition('std');
                 setGeminiAgentPricing('as-is');
                 setClaudeModel('opus');
+            });
+
+            // Stacked bar segment click listener to highlight cards
+            const barStorage = document.getElementById('bar-roi-storage');
+            const barDeep = document.getElementById('bar-roi-deep');
+            const barVideo = document.getElementById('bar-roi-video');
+            const barImage = document.getElementById('bar-roi-image');
+            const barSearch = document.getElementById('bar-roi-search');
+
+            function toggleHighlight(cardId) {
+                const card = document.getElementById(cardId);
+                if (!card) return;
+                
+                const wasHighlighted = card.classList.contains('highlighted');
+                
+                // Clear all highlights
+                document.querySelectorAll('.roi-legend-item').forEach(item => {
+                    item.classList.remove('highlighted');
+                });
+                
+                // Toggle current highlight
+                if (!wasHighlighted) {
+                    card.classList.add('highlighted');
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+
+            if (barStorage) {
+                barStorage.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleHighlight('card-roi-storage');
+                });
+            }
+            if (barDeep) {
+                barDeep.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleHighlight('card-roi-deep');
+                });
+            }
+            if (barVideo) {
+                barVideo.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleHighlight('card-roi-video');
+                });
+            }
+            if (barImage) {
+                barImage.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleHighlight('card-roi-image');
+                });
+            }
+            if (barSearch) {
+                barSearch.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleHighlight('card-roi-search');
+                });
+            }
+
+            // Clear highlights when clicking anywhere else on document
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.roi-legend-item').forEach(item => {
+                    item.classList.remove('highlighted');
+                });
             });
         }
 
